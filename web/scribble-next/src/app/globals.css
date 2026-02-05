@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.joinCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+  max-width: 420px;
+  margin: 48px auto;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+button {
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+canvas {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  touch-action: none;
+}
+
+aside {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.chatBox {
+  border: 1px solid #e2e8f0;
+  min-height: 180px;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+}
