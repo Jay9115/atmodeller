@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chest Pulse Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <p class="eyebrow">30 second gyroscope reading</p>
+      <h1>Chest Pulse Counter</h1>
+      <p class="lead">Place the phone flat and still on the centre-left chest. The app reads device motion, removes drift/noise, calibrates from the first seconds, and estimates heart rate from repeating chest micro-movements.</p>
+      <p class="notice">Wellness prototype only. Do not use for diagnosis, emergencies, or medical decisions.</p>
+
+      <div class="status-grid">
+        <div><span id="state">Ready</span><small>Status</small></div>
+        <div><span id="timer">30.0s</span><small>Remaining</small></div>
+        <div><span id="sampleCount">0</span><small>Samples</small></div>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn">Start reading</button>
+        <button id="stopBtn" disabled>Stop</button>
+      </div>
+
+      <canvas id="chart" width="720" height="220" aria-label="Live filtered gyroscope waveform"></canvas>
+
+      <section id="results" class="results" hidden>
+        <h2>Results</h2>
+        <div class="result-grid">
+          <div><strong id="heartRate">--</strong><small>bpm</small></div>
+          <div><strong id="beats">--</strong><small>beats detected</small></div>
+          <div><strong id="confidence">--</strong><small>confidence</small></div>
+          <div><strong id="rhythm">--</strong><small>rhythm variation</small></div>
+        </div>
+        <p id="quality" class="quality"></p>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
